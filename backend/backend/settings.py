@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
     # Your apps
     'shop',
+    'rest_framework_simplejwt',
 ]
 
 # Middleware
@@ -78,8 +79,8 @@ REST_FRAMEWORK = {
 # JWT Configuration
 from datetime import timedelta
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
 # Authentication
@@ -92,7 +93,6 @@ ACCOUNT_EMAIL_REQUIRED = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Allow frontend
 ]
-
 
 ROOT_URLCONF = 'backend.urls'
 

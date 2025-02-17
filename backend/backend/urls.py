@@ -12,5 +12,5 @@ urlpatterns = [
 
     # API AUTH REGISTER 
     path("api/", include("api.urls")),  # Pastikan ini ada
-
 ]
+
